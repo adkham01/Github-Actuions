@@ -1,0 +1,15 @@
+name: Self-hosted Runner workfloy
+
+on:
+    push:
+      branches: 
+        - main
+        
+jobs:
+  example-job:
+    runs-on: self-hosted
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Run one line script
+        run: echo "Hello from a self-hosted runner"
